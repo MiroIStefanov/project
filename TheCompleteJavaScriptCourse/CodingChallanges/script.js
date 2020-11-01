@@ -18,30 +18,30 @@ m tall.
 m tall. 
 */
 
-let weightMark1 = 78,// грешка по дефолт се изполсва const
-    tallMark1 = 1.69,
-    bmiMark1,
-    weightJohn1 = 92,
-    tallJhon1= 1.95,
-    bmiJohn1,
-    weightMark2 = 95,
-    tallMark2 = 1.88,
-    bmiMark2,
-    weightJohn2 = 85,
-    tallJhon2 = 1.76,
-    bmiJohn2,
-    markHigherBMI1,
-    markHigherBMI2;
+// let weightMark1 = 78,// грешка по дефолт се изполсва const
+//     tallMark1 = 1.69,
+//     bmiMark1,
+//     weightJohn1 = 92,
+//     tallJhon1= 1.95,
+//     bmiJohn1,
+//     weightMark2 = 95,
+//     tallMark2 = 1.88,
+//     bmiMark2,
+//     weightJohn2 = 85,
+//     tallJhon2 = 1.76,
+//     bmiJohn2,
+//     markHigherBMI1,
+//     markHigherBMI2;
 
-bmiMark1 = weightMark1 / tallMark1 ** 2;
-bmiJohn1 = weightJohn1 / tallJhon1 ** 2;
-bmiMark2 = weightMark2 / tallMark2 ** 2;
-bmiJohn2 = weightJohn2 / tallJhon2 ** 2;
-console.log(bmiMark1, bmiMark2, bmiJohn1, bmiJohn2);
+// bmiMark1 = weightMark1 / tallMark1 ** 2;
+// bmiJohn1 = weightJohn1 / tallJhon1 ** 2;
+// bmiMark2 = weightMark2 / tallMark2 ** 2;
+// bmiJohn2 = weightJohn2 / tallJhon2 ** 2;
+// console.log(bmiMark1, bmiMark2, bmiJohn1, bmiJohn2);
 
-markHigherBMI1 = bmiMark1 > bmiJohn1;
-markHigherBMI2 = bmiMark2 > bmiJohn2;
-console.log(markHigherBMI1, markHigherBMI2);
+// markHigherBMI1 = bmiMark1 > bmiJohn1;
+// markHigherBMI2 = bmiMark2 > bmiJohn2;
+// console.log(markHigherBMI1, markHigherBMI2);
 
 // Правилно записване
 
@@ -50,13 +50,46 @@ console.log(markHigherBMI1, markHigherBMI2);
 // const weightJohn = 92;
 // const tallJhon = 1.95;
 
-const weightMark = 958;
-const tallMark = 1.88;
-const weightJohn = 85;
-const tallJhon = 1.76;
-// използват се едни исъщи формули като само се сменят стойностите на променливите
-const bmiMark = weightMark1 / tallMark ** 2;
-const bmiJohn = weightJohn1 / tallJhon ** 2;
-const markHigherBMI = bmiMark > bmiJohn;
+// const weightMark = 95;
+// const tallMark = 1.88;
+// const weightJohn = 85;
+// const tallJhon = 1.76;
+// // използват се едни исъщи формули като само се сменят стойностите на променливите
+// const bmiMark = weightMark / tallMark ** 2;
+// const bmiJohn = weightJohn / tallJhon ** 2;
+// const markHigherBMI = bmiMark > bmiJohn;
 
-console.log(bmiMark, bmiJohn, markHigherBMI);
+// console.log(bmiMark, bmiJohn, markHigherBMI);
+
+
+/* 
+Coding Challenge #2 
+Use the BMI example from Challenge #1, and the code you already wrote, and 
+improve it. 
+Your tasks: 
+1. Print a nice output to the console, saying who has the higher BMI. The message 
+is either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!" 
+2. Use a template literal to include the BMI values in the outputs. Example: "Mark's 
+BMI (28.3) is higher than John's (23.9)!" 
+Hint: Use an if/else statement 😉 
+*/
+
+const weightMark = 78;
+const tallMark = 1.69;
+const weightJohn = 92;
+const tallJhon = 1.95;
+
+// const weightMark = 95;
+// const tallMark = 1.88;
+// const weightJohn = 85;
+// const tallJhon = 1.76;
+
+const bmiMark = weightMark / tallMark ** 2;
+const bmiJohn = weightJohn / tallJhon ** 2;
+
+if(bmiMark > bmiJohn) {
+    console.log(`Mark's BMI (${bmiMark}) is higher than Jon's (${bmiJohn})!`);
+} else {
+    console.log(`John's BMI (${bmiJohn}) is higher than Mark's (${bmiMark})!`);
+}
+// Решението съвпада с прдложеното от преподавателя

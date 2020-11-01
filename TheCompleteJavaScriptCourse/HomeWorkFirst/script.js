@@ -66,18 +66,18 @@ have less people than the average country?
 5. Based on the variables you created, create a new variable 'description'
 which contains a string with this format: 'Portugal is in Europe, and its 11 million people speak portuguese' 
 */
-let halfPopulation = population / 2;
+// let halfPopulation = population / 2;
 //console.log(halfPopulation);
 
-let growPopulation = population;
-growPopulation++;
-console.log(growPopulation);
+// let growPopulation = population;
+// growPopulation++;
+// console.log(growPopulation);
 
-let populationFinland = 6000000;
-console.log(population > populationFinland);
+// let populationFinland = 6000000;
+// console.log(population > populationFinland);
 
 const allCountryAveragePopulation = 33000000;
-console.log(population < allCountryAveragePopulation);
+// console.log(population < allCountryAveragePopulation);
 
 //let description = 'Portugal is in Europe, and its 11 million people speak portoguese';
 //console.log(description);
@@ -88,7 +88,7 @@ console.log(population < allCountryAveragePopulation);
 
 const countryName = 'Portugal';
 const countryPlace = 'Europe';
-const countryPopulation = '11000000';
+const countryPopulation = 11000000;
 const countryLanguage = 'Portoguese';
 
 const description = `${countryName} is in ${countryPlace}, and its ${countryPopulation} people speak ${countryLanguage}`;
@@ -102,10 +102,80 @@ minus the country's population)
 2. After checking the result, change the population temporarily to 13 and then to 
 130. See the different results, and set the population back to original 
 */
-let differencePopulation;
-if(countryPopulation > allCountryAveragePopulation) {
-    console.log(`Portugal's population is abovbe average`);
+// let differencePopulation;
+// if(countryPopulation > allCountryAveragePopulation) {
+//     console.log(`Portugal's population is abovbe average`);
+// } else {
+//     differencePopulation = allCountryAveragePopulation - countryPopulation;
+//     console.log(`Portugal's population is ${differencePopulation} below average`);
+// }
+
+/* 
+LECTURE: Type Conversion and Coercion 
+1. Predict the result of these 5 operations without executing them: 
+'9' - '5'; // 4 число
+'19' - '13' + '17'; // 617 стринг
+'19' - '13' + 17; // 23 число
+'123' < 57; // false
+5 + 6 + '4' + 9 - 4 - 2; // 1143 число - първо се извършват математическите операции с числата от двете старни на стринга - 11 + '4' + 3, после коерцията, защо ли???
+2. Execute the operations to check if you were right 
+
+console.log(5 + 6 + '4' + 9 - 4 - 2);
+*/
+
+
+/*
+LECTURE: Equality Operators: == vs. === 
+
+1. Declare a variable 'numNeighbours' based on a prompt input like this: 
+prompt('How many neighbour countries does your country have?'); 
+
+2. If there is only 1 neighbour, log to the console 'Only 1 border!' (use loose equality == for now) 
+
+3. Use an else-if block to log 'More than 1 border' in case 'numNeighbours' is greater than 1 
+
+4. Use an else block to log 'No borders' (this block will be executed when 
+'numNeighbours' is 0 or any other value) 
+
+5. Test the code with different values of 'numNeighbours', including 1 and 0. 
+
+6. Change == to ===, and test the code again, with the same values of 
+'numNeighbours'. Notice what happens when there is exactly 1 border! Why is this happening? 
+
+7. Finally, convert 'numNeighbours' to a number, and watch what happens now 
+when you input 1 
+
+8. Reflect on why we should use the === operator and type conversion in this 
+situation 
+
+
+const numNeighbours = prompt(`How many neighbour countryes does your country have?`);
+if (numNeighbours == 1) {
+    console.log(`Only 1 border`);
+} else if (numNeighbours == 5) {
+    console.log(`More than 1 border`);
 } else {
-    differencePopulation = allCountryAveragePopulation - countryPopulation;
-    console.log(`Portugal's population is ${differencePopulation} below average`);
+    console.log(`No borders`);// неправилна работа - връща true при подаване на 0
 }
+
+const numNeighbours = prompt(`How many neighbour countryes does your country have?`);
+if (numNeighbours === 1) {
+    console.log(`Only 1 border`);
+} else if (numNeighbours === 5) {
+    console.log(`More than 1 border`);
+} else {
+    console.log(`No borders`);
+}
+console.log(typeof numNeighbours);
+// неправилна работа на if и else if - винаги връща No borders защото функцията prompt връща стринг 
+
+const numNeighbours = Number(prompt(`How many neighbour countryes does your country have?`));
+if (numNeighbours === 1) {
+    console.log(`Only 1 border`);
+} else if (numNeighbours === 5) {
+    console.log(`More than 1 border`);
+} else {
+    console.log(`No borders`);
+}
+//всичко работи нормално поради ръчното конвертиране чрез Number в число на стринга който връша prompt. Затова е строго препоръчително да се използва строго равенство === и ръчно преобразуване на типа данни - в случая от стринг в число
+*/
