@@ -251,7 +251,7 @@ if (favorite3 === 123) {
 // !=  -  loose версия, !== strict версия.  строго се препоръчва използването на srict версията
 const favorite4 = Number(prompt("What's yours favorite number"));
 if (favorite4 !== 123) console.log(`Why not 123`);
-*/
+
 
 // Boolean Logic operators
 //Operators - И - &&, OR - ИЛИ ||, НЕ - NOT - !
@@ -301,3 +301,94 @@ if (hasDriverLicence2 && hasGoodVision2) {
 } else {
     console.log(`Someone else should drive...`);
 }
+
+const isTired = true;// C
+console.log(hasDriverLicence && hasGoodVision && isTired);// връща true
+console.log(hasDriverLicence || hasGoodVision || isTired);// връща true
+
+if (hasDriverLicence && hasGoodVision && !isTired) {
+    console.log('Satah is abel to drive');
+} else {
+    console.log('Someone else should drive');
+}
+
+
+// The Switch Statement
+const day = 'sundavy';
+
+switch (day) {
+    case 'monday':// day === 'monday'
+        console.log('Plane course structure.');
+        console.log('Go to coding meetup.');
+        break;
+    case 'tuesday':
+        console.log('Prepare theory videos.');
+        break;
+    case 'wednesday':
+    case 'thursday':
+        console.log('Write code examples.');
+        break;
+    case 'friday':
+        console.log('Record videos.');
+        break;
+    case 'saturday':
+    case 'sunday':
+        console.log('Enjoy the weekend :)');
+        break;
+    default:
+        console.log('Not valid day!');
+}
+
+if (day === 'monday') {
+    console.log('Plane course structure.');
+    console.log('Go to coding meetup.');
+} else if (day === 'tuesday') {
+    console.log('Prepare theory videos.');
+} else if (day === 'wednesday' || day === 'thursday') {
+    console.log('Write code examples.');
+} else if (day === 'friday') {
+    console.log('Record videos.');
+} else if (day === 'saturday' || day === 'sunday') {
+    console.log('Enjoy the weekend :)');
+} else {
+    console.log('Not valid day!');
+}
+// В случай като този е по-добре да се използва switch satement  защото е по-лесно за четене.
+
+
+// Statements and Expressions
+// Expressions:
+// Expressin е част от код който връща някава стойност
+// 3 + 4  - това е expression
+// 1991 - това е expression
+// true && false && !false - това е expression
+
+// Statements:
+// Statement е по-голямо количество код който не връща стойност
+ 
+// if (23 > 10) {
+//     const str = '23 is bigger';
+// }
+//  В горния пример:
+// 1) целият код е  Statement
+// 2) const str = '23 is bigger'; - е Statement
+// 3) 23 is bigger - е Expression
+*/
+
+// The Conditional(Ternary) Operator
+// The Operators always produce a value or in other words is an expresion
+const age = 17;
+// age >= 18 ? console.log('I love God more conscioussly') : console.log('I love God like theeneger');
+// приложение
+const drink = age >= 18 ? 'wine' : 'water';
+console.log(drink);
+
+let drink2;
+if (age >= 18) {
+    drink2 = 'wine';
+} else {
+    drink2 = 'water';
+}
+console.log(drink2);
+// приложение
+console.log(`I want to drink ${age >= 18 ? 'wine' : 'water'}`);
